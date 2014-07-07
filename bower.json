@@ -1,0 +1,29 @@
+{
+  "name": "SecretConfessions",
+  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/LineOfAwesome/SecretConfessions",
+  "authors": [
+    "Line of Awesome"
+  ],
+  "description": "Secret Confessions App",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "public/js/libs"
+  ],
+  "dependencies": {
+    "jQuery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "backbone": "~1.1.2",
+    "backbone.marionette": "~1.8.4",
+    "json2": "*",
+    "requirejs": "~2.1.11",
+    "classie": "~1.0.1"
+  }
+}
