@@ -1,7 +1,6 @@
 define( function ( require ) {
 	'use strict';
 
-	var Backbone   = require( 'backbone' );
 	var Marionette = require( 'marionette' );
 
 	var ItemView = require( 'apps/home/views/ConfessionItemView' );

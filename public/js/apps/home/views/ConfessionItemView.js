@@ -3,6 +3,7 @@ define( function ( require ) {
 
 	var Backbone   = require( 'backbone' );
 	var Marionette = require( 'marionette' );
+	var _          = require( 'underscore' );
 
 	var template = require( 'text!apps/home/templates/ConfessionDisplay.html' );
 

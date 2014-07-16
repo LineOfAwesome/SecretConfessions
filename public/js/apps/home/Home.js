@@ -3,8 +3,6 @@ define( function ( require ) {
 
 	return function () {
 
-		var $        = require( 'jquery' );
-		var Backbone = require( 'backbone' );
 		var App      = require( 'App' );
 		var Router   = require( 'Router' );
 

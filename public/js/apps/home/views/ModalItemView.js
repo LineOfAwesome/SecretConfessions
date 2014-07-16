@@ -4,6 +4,8 @@ define( function ( require ) {
 	var Backbone   = require( 'backbone' );
 	var Marionette = require( 'marionette' );
 	var classie    = require( 'classie' );
+	var _          = require( 'underscore' );
+	var $          = require( 'jquery' );
 
 	var template = require( 'text!apps/home/templates/ModalTemplate.html' );
 

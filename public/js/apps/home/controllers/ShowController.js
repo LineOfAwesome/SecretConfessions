@@ -2,11 +2,8 @@ define( function ( require ) {
 	'use strict';
 
 	var App                       = require( 'App' );
-	var Marionette                = require( 'marionette' );
-	var classies                  = require( 'classie' );
+	var Backbone                  = require( 'backbone' );
 	var ConfessionsCollection     = require( 'apps/home/collections/ConfessionsCollection' );
-	var ConfessionsCollectionView = require( 'apps/home/views/ConfessionsCollectionView' );
-	var ConfessionItemView        = require( 'apps/home/views/ConfessionItemView' );
 	var SubmissionItemView        = require( 'apps/home/views/SubmissionItemView' );
 
 	App.module( 'Home.Controller', function ( Controller ) {
@@ -38,17 +35,17 @@ define( function ( require ) {
 					url : '/confessions/' + id ,
 
 					success : function ( data ) {
-						classies.remove( $( '#msgOverlay' )[0], 'overlay-closed' );
-						classies.remove( $( '.wrapper' )[0], 'sendtoForward' );
-						classies.add( $( '#msgOverlay' )[0], 'overlay-open' );
-						classies.add( $( '.wrapper' )[0], 'sendtoBack');
+						// classies.remove( $( '#msgOverlay' )[0], 'overlay-closed' );
+						// classies.remove( $( '.wrapper' )[0], 'sendtoForward' );
+						// classies.add( $( '#msgOverlay' )[0], 'overlay-open' );
+						// classies.add( $( '.wrapper' )[0], 'sendtoBack');
 
 						var confession = new App.Home.Views.ModalItemView( { model : data } );
 						layout.modalRegion.show( confession );
 
 					},
 					error : function () {
-						alert( 'An error has occured! Please try again later.' );
+						console.log( 'An error has occured! Please try again later.' );
 					}
 
 				} );

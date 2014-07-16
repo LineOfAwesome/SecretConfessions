@@ -1,6 +1,6 @@
 'use strict';
 
-function generateMongoUrl( options ) {
+function generateMongoUrl ( options ) {
 	options = options || {};
 
 	var host = options.host || 'localhost';
