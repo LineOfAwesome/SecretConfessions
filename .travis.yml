@@ -18,7 +18,7 @@ install:
   - bower install
 
 before_script:
-  # start node
+  # start node test
   - node server.js
 
 script:
