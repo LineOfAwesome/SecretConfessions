@@ -1,0 +1,25 @@
+language: node_js
+
+node_js:
+  - "0.10.28"
+
+notifications:
+  email:
+    - dedito.cantila@gmail.com
+
+before_install:
+  - npm install -g npm
+
+install:
+  # install required dependencies
+  - npm install -g gulp
+  - npm install -g bower
+  - npm install
+  - bower install
+
+before_script:
+  # start node to serve public files
+  - node server.js
+
+script:
+  - gulp default
