@@ -1,24 +1,33 @@
+/* global alert */
 define( function ( require ) {
 	'use strict';
 
-	var Backbone   = require( 'backbone' );
+	var _          = require( 'underscore' );
 	var Marionette = require( 'marionette' );
-	var confession = require( 'apps/home/models/ConfessionModel' );
+	var Confession = require( 'apps/home/models/ConfessionModel' );
 
 	var template = require( 'text!apps/home/templates/SubmissionTemplate.html' );
 
 	return Marionette.ItemView.extend( {
 
 		template : _.template( template ),
+
 		events   : {
 			'click #add' : 'submit'
 		},
+
+		ui       : {
+			'addButton' : '#add',
+			'message'   : '#message',
+			'alias'     : '#alias'
+		},
+
 		submit   : function ( e ) {
 			e.preventDefault();
 
 			var msg = new Confession( {
-				'message' : $('#message').val(),
-				'alias'   : $('#alias').val()
+				'message' : this.ui.message.val(),
+				'alias'   : this.ui.alias.val()
 			} );
 
 			if ( msg.isValid() ) {

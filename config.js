@@ -2,7 +2,7 @@ module.exports = {
 	'appName' : 'SecretConfessions',
 
 	'host' : 'localhost',
-	'port' : '3000',
+	'port' : '8080',
 
 	'db' : {
 		'host' : 'localhost',

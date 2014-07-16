@@ -1,3 +1,4 @@
+'use strict';
 var express     = require( 'express' );
 var Confessions = require( '../model/ConfessionsModel' );
 var Router      = express.Router();
@@ -38,27 +39,27 @@ Router
 		} );
 	} )
 	.put( '/confessions/:messageId', function ( request, response ) {
-		Confessions.update( {
-			_id : request.params.messageId},
+		Confessions.update(
+			{ _id : request.params.messageId },
 			{ message : request.body.message },
-			function( error ) {
+			function ( error ) {
 				if ( error ) {
 					response.send( 500, error );
 				}
 				response.send( 200, { 'status' : 'OK' } );
-		} );
+			} );
 	} )
-	.delete( '/confessions/:messageId', function( request, response ) {
+	.delete( '/confessions/:messageId', function ( request, response ) {
 		Confessions.remove( { _id : request.params.messageId },
-			function( error ) {
+			function ( error ) {
 				if ( error ) {
 					response.send( 500, error );
 				}
 				response.send( 200, { 'status' : 'OK' } );
-		} );
+			} );
 	} )
-	.delete( '/confessions', function( request, response ) {
-		Confessions.remove( {}, function( error) {
+	.delete( '/confessions', function ( request, response ) {
+		Confessions.remove( {}, function ( error ) {
 			if ( error ) {
 				response.send( 500, error );
 			}
