@@ -18,7 +18,7 @@ install:
   - bower install
 
 before_script:
-  # start node test
+  # start node to serve public files
   - node server.js
 
 script:
