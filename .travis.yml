@@ -17,9 +17,5 @@ install:
   - npm install
   - bower install
 
-before_script:
-  # start node test
-  - node server.js
-
 script:
   - gulp default
