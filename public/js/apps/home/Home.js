@@ -13,8 +13,7 @@ define( function ( require ) {
 
 			Home.Router = Router.extend( {
 				'appRoutes' : {
-					''         : 'showHomePage',
-					'show/:id' : 'showConfessionPost'
+					'' : 'showHomePage'
 				}
 			} );
 

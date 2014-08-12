@@ -6,8 +6,10 @@ define( function ( require ) {
 
 	//var admin = require( 'apps/admin/Admin' );
 	var home  = require( 'apps/home/Home' );
+	var modal = require( 'apps/modal/Modal' );
 
 	//admin();
-	home( );
+	home();
+	modal();
 
 } );
